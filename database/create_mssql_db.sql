@@ -3,7 +3,6 @@ In case I get round to adding MS SQL support, this creates and populates the tab
 */
 
 CREATE DATABASE dvwa;
-
 USE dvwa;
 
 CREATE TABLE users (user_id INT PRIMARY KEY,first_name VARCHAR(15),last_name VARCHAR(15), [user] VARCHAR(15), password VARCHAR(32),avatar VARCHAR(70), last_login DATETIME, failed_login INT);
