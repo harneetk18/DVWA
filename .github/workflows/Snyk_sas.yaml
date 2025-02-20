@@ -39,7 +39,18 @@ jobs:
        with: 
         name: snyk-code-report-json
         path: snyk-code-report.html
-     
+     - name: Upload Snyk HTML Report
+       uses: actions/upload-artifact@v2
+       with:
+          name: snyk-code-report-html
+          path: snyk-code-report.html
+     - name: Run Snyk Open Source Test (SCA)
+       run: |
+        snyk test --json > snyk-sca-report.json || true
+ 
+     - name: Convert Snyk SCA Report to HTML
+       run: snyk-to-html -i snyk-sca-report.json -o snyk-sca-report.html
+
      - name: Run Snyk SCA Report to HTML
        run: snyk-to-html -i snyk-sca-report.json -o snyk-sca-report.html
       
