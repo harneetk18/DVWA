@@ -25,11 +25,11 @@ jobs:
      - name: Authenticate Snyk
        env: 
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: Snyk auth $SNYK_TOKEN
+        run: snyk auth $SNYK_TOKEN
 
      - name: Run Snyk Code Test
-       run: |
-        snyk-code-report.json || true
+       run: | 
+        snyk-code-report.json  > snyk-code-report.json || true
 
      - name: Convert Snyk Report to HTML
        run: snyk-to-html -i snyk-code-report.json -o snyk-code-report.html
