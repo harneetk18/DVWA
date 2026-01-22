@@ -28,9 +28,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=sonarcloudqualitycheck
-            -Dsonar.projectKey=jitu234392_sonarcloud
-            -Dsonar.projectName=sonarcloud-demo
+            -Dsonar.organization=harneetk18
+            -Dsonar.projectKey=harneetk18_DVWA
+            -Dsonar.projectName=DVWA
             -Dsonar.sources=.
             -Dsonar.exclusions=**/tests/**,**/docs/**,**/vendor/**,**/*.md
             -Dsonar.sourceEncoding=UTF-8
