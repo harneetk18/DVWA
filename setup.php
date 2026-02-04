@@ -1,5 +1,5 @@
 <?php
-
+#Test File
 define( 'DVWA_WEB_PAGE_TO_ROOT', '' );
 require_once DVWA_WEB_PAGE_TO_ROOT . 'dvwa/includes/dvwaPage.inc.php';
 
@@ -154,3 +154,4 @@ allow_url_include = On</code></pre>
 dvwaHtmlEcho( $page );
 
 ?>
+
